@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<title>Ayaz Aybek - YouTube Thumbnail</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+	<h1>YouTube Thumbnail Converter</h1>
+		
+    <input type="text" class="text" id="youtubeLink" placeholder="Enter the Link Here..."/>
+
+    <button id="cek" class="button">
+		Check the YouTube Thumbnail
+	</button>
+
+	<div id="foto"></div>
+
+	<script type="text/javascript">
+
+		$("#cek").click(function () {
+
+   			var link = $( "#youtubeLink" ).val();
+   			var foto = link.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+   			$( "#foto" ).html( "<p><img src=\"http://i3.ytimg.com/vi/" + foto[1] + "/maxresdefault.jpg\" class=\"image\" /> " );  
+   		
+		});
+
+	</script>
+
+	<p>Resim bulunamamışsa lütfen başka bir link deneyin</p>
+	
+</body>
+</html>
