@@ -21,7 +21,6 @@
 	<div id="foto"></div>
 
 	<script type="text/javascript">
-
 		$("#cek").click(function () {
 
    			var link = $( "#youtubeLink" ).val();
@@ -29,10 +28,15 @@
    			$( "#foto" ).html( "<p><img src=\"http://i3.ytimg.com/vi/" + foto[1] + "/maxresdefault.jpg\" class=\"image\" /> " );  
    		
 		});
-
+	</script>
+	<script>
+		const youtubeLink = document.getElementById('youtubeLink');
+		youtubeLink.onclick = function(){
+			youtubeLink.select();
+		}
 	</script>
 
-	<p>Resim bulunamamışsa lütfen başka bir link deneyin</p>
+	<p>If image does not found, please retry again.</p>
 	
 </body>
 </html>
