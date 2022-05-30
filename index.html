@@ -9,10 +9,11 @@
 	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
+	<h1 class="main-h1">
+		YouTube Thumbnail Converter
+	</h1>
 
-	<h1>YouTube Thumbnail Converter</h1>
-		
-    <input type="text" class="text" id="youtubeLink" placeholder="Enter the Link Here..."/>
+    <input type="text" class="text" id="youtubeLink" placeholder="Enter your Link Here..."/>
 
     <button id="cek" class="button">
 		Check the YouTube Thumbnail
@@ -29,6 +30,7 @@
    		
 		});
 	</script>
+
 	<script>
 		const youtubeLink = document.getElementById('youtubeLink');
 		youtubeLink.onclick = function(){
@@ -36,7 +38,7 @@
 		}
 	</script>
 
-	<p>If image does not found, please retry again.</p>
+	<p class="main-p">If image does not found, please retry again.</p>
 	
 </body>
 </html>
